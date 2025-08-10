@@ -315,9 +315,12 @@ def playback_dataset(args):
 
         env_meta = get_env_metadata_from_dataset(dataset_path=args.dataset)
         if args.use_abs_actions:
+            # env_meta["env_kwargs"]["controller_configs"][
+            #     "control_delta"
+            # ] = False  # absolute action space
             env_meta["env_kwargs"]["controller_configs"][
-                "control_delta"
-            ] = False  # absolute action space
+                "input_type"
+            ] = "absolute"
 
         env_kwargs = env_meta["env_kwargs"]
         env_kwargs["env_name"] = env_meta["env_name"]
