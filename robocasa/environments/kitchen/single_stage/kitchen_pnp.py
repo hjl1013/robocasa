@@ -96,33 +96,33 @@ class PnPCounterToCab(PnP):
         )
 
         # distractors
-        cfgs.append(
-            dict(
-                name="distr_counter",
-                obj_groups="all",
-                placement=dict(
-                    fixture=self.counter,
-                    sample_region_kwargs=dict(
-                        ref=self.cab,
-                    ),
-                    size=(1.0, 0.30),
-                    pos=(0.0, 1.0),
-                    offset=(0.0, -0.05),
-                ),
-            )
-        )
-        cfgs.append(
-            dict(
-                name="distr_cab",
-                obj_groups="all",
-                placement=dict(
-                    fixture=self.cab,
-                    size=(1.0, 0.20),
-                    pos=(0.0, 1.0),
-                    offset=(0.0, 0.0),
-                ),
-            )
-        )
+        # cfgs.append(
+        #     dict(
+        #         name="distr_counter",
+        #         obj_groups="all",
+        #         placement=dict(
+        #             fixture=self.counter,
+        #             sample_region_kwargs=dict(
+        #                 ref=self.cab,
+        #             ),
+        #             size=(1.0, 0.30),
+        #             pos=(0.0, 1.0),
+        #             offset=(0.0, -0.05),
+        #         ),
+        #     )
+        # )
+        # cfgs.append(
+        #     dict(
+        #         name="distr_cab",
+        #         obj_groups="all",
+        #         placement=dict(
+        #             fixture=self.cab,
+        #             size=(1.0, 0.20),
+        #             pos=(0.0, 1.0),
+        #             offset=(0.0, 0.0),
+        #         ),
+        #     )
+        # )
 
         return cfgs
 
